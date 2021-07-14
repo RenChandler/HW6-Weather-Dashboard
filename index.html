@@ -15,21 +15,36 @@
         <h1>Weather dashboard</h1>
     </header>
 
-    <form class="row g-3">
-        <div class="col-auto">
-            <label for="staticEmail2" class="visually-hidden">Email</label>
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com" />
-        </div>
-        <div class="col-auto">
-            <label for="inputPassword2" class="visually-hidden">Password</label>
-            <input type="password" class="form-control" id="inputPassword2" placeholder="Password" />
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">
-                Confirm identity
-            </button>
-        </div>
-    </form>
+    <div class="container-fluid">
+        <div class="row">
+            <form class="col-lg-3 g-3 form-inline">
+                <div class="">
+                    <label for="city-search" class="visually-hidden">City Search</label>
+                    <input type="text" class="form-control" id="city-search" placeholder="Enter a city" />
+                </div>
+                <div class="">
+                    <button type="submit" class="btn btn-primary mb-3" id="search-id">
+                        Search
+                    </button>
+                </div>
+            </form>
+
+            <div class="col-lg-9">
+
+                <section class="today">
+
+                    <h2 id="city-today"></h2>
+
+                
+                </section>
+            </div>
+         </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
+
