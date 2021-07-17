@@ -15,7 +15,7 @@ function getCity (city){
                 return response.json()
             }
         ).then(function (data){
-            console.log(data)
+            getToday(data[0].lat, data[0].lon)
         })
 
 }
@@ -30,4 +30,16 @@ function handleInput(event){
 }
 
 searchBtn.addEventListener("click",handleInput)
-//cityInput.value = "";
+
+
+function getToday(lat, lon){
+    var todayURL =`http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}${apiKey}&units=imperial`;
+    fetch(todayURL)
+        .then(
+            function(response){
+                return response.json()
+            }
+        ).then(function(data){
+            console.log(data)
+        })
+}
